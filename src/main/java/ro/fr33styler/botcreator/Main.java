@@ -40,7 +40,7 @@ public class Main {
         clientsBox.addItem("All");
         bottomPanel.add(clientsBox);
 
-        JTextField sendInput = new JTextField("/", 64);
+        JTextField sendInput = new JTextField("", 64);
         bottomPanel.add(sendInput);
 
         sendInput.addKeyListener(new KeyAdapter() {
@@ -59,7 +59,6 @@ public class Main {
                             }
                         }
                     }
-                    sendInput.setText("/");
                 }
             }
 
@@ -113,7 +112,7 @@ public class Main {
             try {
                 amount = Integer.parseInt(clientsInput.getText());
             } catch (NumberFormatException exception) {
-                LOGGER.log(Level.SEVERE, "The clients must be a number!");
+                LOGGER.log(Level.SEVERE, "The number of clients must be a number!");
                 return;
             }
 
