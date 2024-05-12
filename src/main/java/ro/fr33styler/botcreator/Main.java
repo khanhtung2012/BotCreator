@@ -124,8 +124,8 @@ public class Main {
 
             while (clients.size() < amount) {
                 int id = clients.size();
-                clients.addLast(new Bot("Bot_" + id, LOGGER));
-                clientsBox.addItem("Bot_" + id);
+                clients.addLast(new Bot("kbbot_" + id, LOGGER));
+                clientsBox.addItem("kbbot_" + id);
             }
             while (clients.size() > amount) {
                 Bot bot = clients.removeLast();
@@ -147,7 +147,7 @@ public class Main {
         frame.setVisible(true);
 
         Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> LOGGER.log(Level.SEVERE, throwable.getMessage(), throwable));
-        LOGGER.info("Bot Creator has started!");
+        LOGGER.info("");
 
     }
 
